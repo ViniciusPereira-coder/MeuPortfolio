@@ -442,4 +442,27 @@
     .fixed-button i {
         font-size: 20px;
     }
+
+
+    @media (max-width: 768px) {
+        .imagem-sobre {
+            width: 250px;
+            height: 250px;
+        }
+    }
+
+/* Para celulares */
+@media (max-width: 480px) {
+    .imagem-sobre {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+
+
+
+
+
 }
