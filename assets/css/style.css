@@ -118,8 +118,8 @@ a {
     max-width: none;
     margin: 0;
     position: relative;
+    padding: 1; /* Adicionei isso */
 }
-
 /*************** HEADER *****/
 .header {
     user-select: none;
@@ -525,8 +525,8 @@ a {
 }
 
 .imagem-sobre {
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
     position: relative;
     border-radius: 50%;
     overflow: hidden;
