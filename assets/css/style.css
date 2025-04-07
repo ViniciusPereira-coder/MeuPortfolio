@@ -45,13 +45,9 @@ html {
 body {
     background-color: var(--color-black);
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: var(--font-pequena);
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    transition: transform 0.3s ease-out;
 }
 
 li {
@@ -119,12 +115,9 @@ a {
 
 .container {
     width: 100%;
-    max-width: 1400px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    max-width: none;
+    margin: 0;
+    position: relative;
 }
 
 /*************** HEADER *****/
@@ -132,13 +125,12 @@ a {
     user-select: none;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
     padding: 2rem 1.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 99;
-    transition: top 0.3s ease-in-out;
+    z-index: 1000;
     background-color: rgba(0, 0, 0, .9); 
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px); 
@@ -146,11 +138,12 @@ a {
 
 /* Logo */
 .logo {
-    width: 100%;
+    width: auto;
 }
 
 .logo img {
     width: 150px;
+    height: auto;
 }
 
 /* Menu */
@@ -159,7 +152,7 @@ a {
     align-items: center;
     justify-content: flex-end;
     position: relative;
-    z-index: 100;
+    z-index: 1001;
 }
 
 .hamburger {
@@ -205,7 +198,7 @@ a {
     top: 0;
     height: 0;
     width: 100%;
-    z-index: 98;
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,7 +220,6 @@ a {
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    transition: opacity 0.5s ease-in-out;
 }
 
 .nav-menu a {
@@ -249,7 +241,6 @@ a {
 
 .nav-menu a:hover {
     color: var(--color-destaque1);
-    transition: all 0.3s ease;
 }
 
 /*************** INICIO *****/
@@ -259,9 +250,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0rem 1rem;
-    z-index: 1;
-    user-select: none;
+    padding: 6rem 1rem 0;
+    position: relative;
 }
 
 .container-inicio {
@@ -272,6 +262,8 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    padding: 0 1rem;
 }
 
 .conteudo-inicio {
@@ -282,6 +274,7 @@ a {
     justify-content: center;
     text-align: center;
     gap: 1rem;
+    padding: 0 1rem;
 }
 
 .titulo-inicio {
@@ -299,12 +292,13 @@ a {
     max-width: 900px;
     color: var(--color-gray2);
     font-family: var(--font-pequena);
+    margin: 0 auto;
 }
 
 /* Botão Inicio */
 .cta {
     position: relative;
-    margin: auto;
+    margin: 2rem auto;
     padding: 12px 18px;
     transition: all 0.2s ease;
     border: none;
@@ -368,8 +362,8 @@ a {
 .complemento-inicio {
     position: absolute;
     bottom: 2rem;
-    width: 100vw;
-    padding: 0rem 1.2rem;
+    width: 100%;
+    padding: 0 1.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -393,14 +387,12 @@ a {
 .sobre {
     background-color: var(--color-black);
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
-    z-index: 1;
-    user-select: none;
-    overflow: visible;
+    padding: 6rem 1rem 2rem;
+    position: relative;
 }
 
 .container-sobre {
@@ -408,18 +400,22 @@ a {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    position: relative;
+    max-width: none;
+    padding: 0 1rem;
 }
 
 .headline-sobre {
-    height: 30%;
-    width: 100vw;
+    height: 20%;
+    width: 100%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
+    top: 0;
 }
 
 .headline-scroll {
@@ -433,7 +429,6 @@ a {
     0% {
         transform: translateX(0);
     }
-
     100% {
         transform: translateX(-50%);
     }
@@ -466,11 +461,13 @@ a {
 }
 
 .conteudo-sobre {
-    position: relative;
-    top: 30%;
     width: 100%;
-    height: 70%;
+    height: 80%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10%;
 }
 
 .left-sobre {
@@ -480,8 +477,9 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items: flex-start;
     gap: 3rem;
+    padding: 2rem;
 }
 
 .textos-sobre h1 {
@@ -523,26 +521,30 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .imagem-sobre {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
-    position: absolute;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .complemento-sobre {
-    width: auto;
-    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }
 
 .complemento-sobre img {
-    position: relative;
-    left: 50px;
-    top: 50px;
-    width: 90%;
-    z-index: 1000;
+    width: 60%;
     animation: rotate 20s linear infinite;
 }
 
@@ -550,15 +552,17 @@ a {
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(360deg);
     }
 }
 
 .imagem-sobre img {
-    width: 90%;
-    z-index: 99;
+    width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    z-index: 2;
+    position: relative;
 }
 
 /*************** SKILLS *****/
@@ -568,6 +572,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .container-skills {
@@ -576,6 +581,8 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    max-width: none;
+    padding: 0 1rem;
 }
 
 .headline-skills {
@@ -583,9 +590,6 @@ a {
     text-align: center;
     margin-bottom: 2rem;
     color: var(--color-white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .text-headline-skills h2 {
@@ -599,12 +603,14 @@ a {
     font-weight: 500;
     line-height: 1.4;
     max-width: 900px;
+    margin: 0 auto;
 }
 
 .conteudo-skills {
     display: grid;
     gap: 1rem;
     width: 100%;
+    padding: 0 1rem;
 }
 
 .box-skills {
@@ -614,7 +620,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 450px;
+    min-height: 300px;
     padding: 2rem;
     gap: 1.5rem;
 }
@@ -650,16 +656,15 @@ a {
 /*************** SERVIÇOS *****/
 .servicos {
     background-color: var(--color-white);
-    width: 100vw;
-    height: 100%;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
+    padding: 6rem 1rem 2rem;
 }
 
 .container-servicos {
-    background-color: var(--color-white);
     width: 100%;
     max-width: 1400px;
     height: 100%;
@@ -667,38 +672,40 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    max-width: none;
+    padding: 0 1rem;
 }
 
 .headline-servicos {
     width: 100%;
-    height: 40vh;
+    min-height: 20vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 1rem;
 }
 
 .titulo-servicos {
-    height: 100%;
     width: 50%;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: flex-start;
 }
 
 .titulo-servicos h1 {
     color: var(--color-black);
-    width: 50%;
-    font-size: 8vw;
+    font-size: clamp(3rem, 8vw, 8rem);
     font-weight: lighter;
     font-family: var(--font-grande);
 }
 
 .descricao-servicos {
     width: 50%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: right;
     line-height: 1.4;
     letter-spacing: 1.5px;
+    color: var(--color-black);
 }
 
 .servicos-cards {
@@ -706,24 +713,24 @@ a {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     gap: 2rem;
-    padding: 2rem 0rem;
+    padding: 2rem 0;
 }
 
 .card-servicos {
     border: 1px solid hsla(0, 0%, 0%, 0.35);
-    max-width: 95%;
+    width: 95%;
     min-height: 180px;
     border-radius: 150px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
+    margin-left: auto;
 }
 
 .card-servicos-left {
-    margin-left: 5%;
     border: 1px solid hsla(0, 0%, 0%, 0.35);
     width: 95%;
     min-height: 180px;
@@ -740,6 +747,7 @@ a {
     font-size: clamp(0.8rem, 2.5vw + .4rem, 2rem);
     font-family: var(--font-pequena);
     font-weight: normal;
+    color: var(--color-black);
 }
 
 .card-icon {
@@ -760,15 +768,15 @@ a {
     margin-bottom: -7px;
 }
 
-/*************** ALGUMA FRASE AQUI  *****/
+/*************** FREE YOUR MIND *****/
 .free-your-mind {
     background-color: var(--color-white);
-    width: 100vw;
-    height: 100%;
+    width: 100%;
+    min-height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 1rem;
+    padding: 3rem 1rem;
     font-family: var(--font-grande);
 }
 
@@ -777,13 +785,15 @@ a {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     justify-content: center;
 }
 
 .line-container {
     display: flex;
     align-items: center;
+    width: 100%;
+    margin: 1rem 0;
 }
 
 .line-container.center {
@@ -796,15 +806,8 @@ a {
 
 .container-free-your-mind span {
     color: var(--color-black);
-    font-size: 15vw;
-}
-
-.center span {
-    text-align: center;
-}
-
-.right span {
-    text-align: right;
+    font-size: clamp(3rem, 15vw, 10rem);
+    white-space: nowrap;
 }
 
 .line {
@@ -817,12 +820,12 @@ a {
 /*************** PORTFOLIO *****/
 .portfolio {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     color: var(--color-white);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0rem 7rem 0rem;
+    padding: 6rem 1rem 2rem;
 }
 
 .container-portfolio {
@@ -833,29 +836,33 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    max-width: none;
+    padding: 0 1rem;
 }
 
 .headline-portfolio {
     width: 100%;
-    height: 40vh;
+    min-height: 20vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 1rem;
 }
 
 .headline-portfolio .titulo {
     width: 50%;
-    font-size: 8vw;
+    font-size: clamp(3rem, 8vw, 8rem);
     font-weight: lighter;
     font-family: var(--font-grande);
 }
 
 .headline-portfolio .descricao {
     width: 50%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: right;
     line-height: 1.4;
     letter-spacing: 1.5px;
+    color: var(--color-gray2);
 }
 
 .container-case {
@@ -865,7 +872,8 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 8rem;
+    gap: 4rem;
+    padding: 2rem 0;
 }
 
 .case1,
@@ -873,7 +881,7 @@ a {
 .case3,
 .case4 {
     width: 100%;
-    height: 70vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -925,7 +933,8 @@ a {
     user-select: none;
     transform: translateY(-50%);
     border-radius: 50%;
-    z-index: 1;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .prev {
@@ -942,29 +951,30 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
 }
 
 .conteudo-textos-case {
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: left;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
 }
 
 .conteudo-textos-case h1 {
     color: var(--color-white);
-    font-size: 6vw;
+    font-size: clamp(2rem, 6vw, 5rem);
     letter-spacing: 3px;
+    margin-bottom: 1rem;
 }
 
 .conteudo-textos-case p {
     color: var(--color-gray2);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.4;
     letter-spacing: 1.5px;
-    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .conteudo-textos-case span {
@@ -983,10 +993,10 @@ a {
 
 /*************** CONTATO *****/
 .contato {
-    width: 100vw;
-    height: auto;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
-    padding: 2rem 0rem 3rem 0rem;
+    padding: 6rem 1rem 2rem;
     align-items: center;
     justify-content: center;
     background-color: var(--color-white);
@@ -994,33 +1004,34 @@ a {
 
 .container-contato {
     width: 100%;
-    height: 100vh;
     max-width: 1400px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: none;
+    padding: 0 1rem;
 }
 
 .headline-contato {
     width: 100%;
-    height: 40vh;
+    min-height: 20vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 1rem;
 }
 
 .titulo-contato {
-    height: 100%;
     width: 50%;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: flex-start;
 }
 
 .titulo-contato h1 {
     color: var(--color-black);
-    width: 50%;
-    font-size: 8vw;
+    font-size: clamp(3rem, 8vw, 8rem);
     font-weight: lighter;
     font-family: var(--font-grande);
 }
@@ -1030,13 +1041,26 @@ a {
     text-align: right;
 }
 
-.descricao-contato a {
+.lista-contato {
+    list-style: none;
+}
+
+.lista-contato li {
+    margin-bottom: 1rem;
+}
+
+.lista-contato a {
     text-decoration: none;
     color: var(--color-black);
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 1.5px;
     line-height: 1.4;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.lista-contato a:hover {
+    color: var(--color-destaque2);
 }
 
 .conteudo-contato {
@@ -1046,6 +1070,7 @@ a {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    padding: 2rem 0;
 }
 
 .formulario-contato {
@@ -1054,50 +1079,52 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
-    padding: 2rem 0rem 2rem 0rem;
+    gap: 1.5rem;
+    padding: 2rem;
 }
 
 .formulario-contato h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    color: var(--color-black);
+    margin-bottom: 1rem;
 }
 
 .formulario-contato p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--color-gray1);
     font-weight: 500;
     line-height: 1.4;
+    margin-bottom: 2rem;
 }
 
 .form {
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
-.form input {
+.form input,
+.form textarea {
     font-family: var(--font-pequena);
     width: 100%;
-    height: 30px;
     border-radius: 30px;
     outline: none;
     border: 2px solid rgba(128, 128, 128, 0.5);
-    padding: 1.5rem 1rem;
-    font-size: 1.2rem;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: var(--color-destaque2);
 }
 
 .form textarea {
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    outline: none;
-    border: 2px solid rgba(128, 128, 128, 0.5);
-    font-family: var(--font-pequena);
-    font-size: 1.2rem;
-    padding: 1.5rem 1rem;
+    min-height: 150px;
+    resize: vertical;
 }
 
 .btn {
@@ -1105,10 +1132,17 @@ a {
     color: var(--color-black);
     font-weight: bold;
     width: 190px;
-    padding: 1rem 0rem;
+    padding: 1rem 0;
     border: 2px solid rgba(128, 128, 128, 0.5);
     outline: none;
     border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-destaque2);
+    color: var(--color-white);
 }
 
 .logo-contato {
@@ -1116,12 +1150,15 @@ a {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
+    padding: 2rem;
 }
 
 .logo-contato img {
-    width: 80%;
+    width: 100%;
+    max-width: 500px;
     border-radius: 36px;
+    object-fit: cover;
 }
 
 /*************** FOOTER *****/
@@ -1134,7 +1171,6 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
 }
 
 .container-footer {
@@ -1143,40 +1179,35 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .footer-column {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo-column {
     align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .logo-column img {
-    width: 100px;
-}
-
-.menu-column {
-    text-align: center;
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 .footer-nav {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 0.5rem;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
 .footer-nav a {
     text-decoration: none;
     color: var(--color-white);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
@@ -1184,21 +1215,17 @@ a {
     color: var(--color-destaque1);
 }
 
-.social-column {
-    text-align: right;
-}
-
 .social-links {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .social-links a {
     text-decoration: none;
     color: var(--color-white);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
     transition: color 0.3s ease;
@@ -1213,10 +1240,147 @@ a {
 }
 
 .credits-column {
-    text-align: right;
+    width: 100%;
+    text-align: center;
     font-size: 0.9rem;
+    padding-top: 2rem;
+    border-top: 1px solid hsla(0, 0%, 100%, 0.15);
 }
 
 .credits-column p {
-    margin: 0.2rem 0;
+    margin: 0.5rem 0;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .header {
+        padding: 1.5rem 1rem;
+    }
+    
+    .conteudo-sobre {
+        flex-direction: column;
+        margin-top: 15%;
+    }
+    
+    .left-sobre,
+    .right-sobre {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .imagem-sobre img {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .complemento-sobre img {
+        width: 50%;
+    }
+    
+    .headline-servicos,
+    .headline-portfolio,
+    .headline-contato {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .titulo-servicos,
+    .titulo-contato,
+    .headline-portfolio .titulo,
+    .descricao-servicos,
+    .headline-portfolio .descricao,
+    .descricao-contato {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .card-servicos,
+    .card-servicos-left {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .case1,
+    .case2,
+    .case3,
+    .case4 {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .imagens-case,
+    .textos-case {
+        width: 100%;
+    }
+    
+    .conteudo-contato {
+        flex-direction: column;
+    }
+    
+    .formulario-contato,
+    .logo-contato {
+        width: 100%;
+    }
+    
+    .container-footer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .footer-column {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-nav,
+    .social-links {
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .headline-scroll span {
+        font-size: 3rem;
+    }
+    
+    .textos-sobre h1 {
+        font-size: 2rem;
+    }
+    
+    .textos-sobre p {
+        font-size: 1.2rem;
+    }
+    
+    .redes-sociais a {
+        font-size: 1.2rem;
+    }
+    
+    .box-skills {
+        min-height: 250px;
+        padding: 1.5rem;
+    }
+    
+    .box-skills i {
+        font-size: 3rem;
+    }
+    
+    .box-skills h3 {
+        font-size: 1.5rem;
+    }
+    
+    .box-skills p {
+        font-size: 1rem;
+    }
+    
+    .conteudo-textos-case h1 {
+        font-size: 2.5rem;
+    }
+    
+    .conteudo-textos-case p {
+        font-size: 1rem;
+    }
+    
+    .lista-contato a {
+        font-size: 1.2rem;
+    }
 }
