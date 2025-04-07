@@ -442,4 +442,64 @@
     .fixed-button i {
         font-size: 20px;
     }
+
+
+    @media (max-width: 768px) {
+        .imagem-sobre {
+            width: 250px;
+            height: 250px;
+        }
+    }
+
+/* Para celulares */
+@media (max-width: 480px) {
+    .imagem-sobre {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    /* Ajustes para tablet */
+    .imagem-sobre {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para tablets menores */
+    .imagem-sobre {
+        width: 250px;
+        height: 250px;
+        animation: pulse-border 2.5s infinite;
+    }
+    
+    .right-sobre {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para mobile */
+    .imagem-sobre {
+        width: 200px;
+        height: 200px;
+        animation: pulse-border 3s infinite;
+    }
+    
+    .imagem-sobre:hover {
+        transform: scale(1.03);
+    }
+    
+    .headline-sobre {
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+
 }
