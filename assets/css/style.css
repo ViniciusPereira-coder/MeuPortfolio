@@ -15,8 +15,8 @@
     --color-gray1: #3d4143;
     --color-gray2: #9c9d9d;
     --color-white: #f6f6f6;
-    --color-destaque1: #e7fc00;
-    --color-destaque2: #728e6f;
+    --color-destaque1: #f1f1ec;
+    --color-destaque2: #1a1b1b;
 }
 
 /* Estilizando a barra de rolagem */
@@ -118,8 +118,9 @@ a {
     max-width: none;
     margin: 0;
     position: relative;
-    padding: 1; /* Adicionei isso */
+    padding: 1;
 }
+
 /*************** HEADER *****/
 .header {
     user-select: none;
@@ -295,68 +296,80 @@ a {
     margin: 0 auto;
 }
 
-/* Botão Inicio */
+/* BOTÃO INICIO - VERSÃO ATUALIZADA */
 .cta {
     position: relative;
     margin: 2rem auto;
-    padding: 12px 18px;
-    transition: all 0.2s ease;
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-.cta span {
+    padding: 15px 30px;
+    border: 1px solid var(--color-white);
+    border-radius: 50px;
+    background-color: transparent;
+    color: var(--color-white);
+    font-family: var(--font-pequena);
     font-size: clamp(1.2rem, 1.5vw + 1rem, 2rem);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.cta:before {
-    content: "";
+.cta::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
-    border-radius: 50px;
-    background: var(--color-destaque2);
-    width: 45px;
-    height: 45px;
-    transition: all 0.3s ease;
+    width: 0;
+    height: 100%;
+    background-color: var(--color-white);
+    z-index: -1;
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.cta span {
-    position: relative;
-    font-family: var(--font-pequena);
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: var(--color-white);
+.cta:hover {
+    color: var(--color-black);
+    font-weight: 500;
+}
+
+.cta:hover::before {
+    width: 100%;
 }
 
 .cta svg {
-    position: relative;
-    top: 0;
-    margin-left: 10px;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke: var(--color-destaque2);
+    width: 15px;
+    height: 10px;
+    stroke: var(--color-white);
     stroke-width: 2;
-    transform: translateX(-5px);
-    transition: all 0.3s ease;
-}
-
-.cta:hover:before {
-    width: 100%;
-    background: var(--color-destaque2);
+    fill: none;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .cta:hover svg {
-    transform: translateX(0);
-    stroke: var(--color-destaque1);
+    stroke: var(--color-black);
+    transform: translateX(5px);
 }
 
 .cta:active {
-    transform: scale(0.95);
+    transform: scale(0.97);
+}
+
+/* Versão alternativa com fundo escuro */
+.cta.dark {
+    background-color: var(--color-destaque2);
+    border-color: var(--color-gray2);
+}
+
+.cta.dark:hover {
+    color: var(--color-white);
+}
+
+.cta.dark::before {
+    background-color: var(--color-gray1);
 }
 
 .complemento-inicio {
@@ -569,14 +582,11 @@ a {
     transition: transform 0.5s ease;
 }
 
-/* Efeito hover */
 .imagem-sobre:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px var(--color-white);
 }
 
-
-/* Animação de borda pulsante */
 @keyframes pulse-border {
     0% { 
         box-shadow: 0 0 0 0px rgba(252, 252, 251, 0.781), 
@@ -587,7 +597,6 @@ a {
                     0 0 25px rgba(0,0,0,0.3); 
     }
 }
-
 
 /*************** SKILLS *****/
 .skills {
@@ -1288,20 +1297,13 @@ a {
     
     .left-sobre,
     .right-sobre {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px; /* Espaço ao redor */
+        width: 100%;
+        padding: 20px;
     }
     
     .imagem-sobre {
-        width: 50px; /* Ajuste conforme necessário */
-        height: 50px; /* Deve ser igual à largura */
-        position: relative;
-    }
-    
-    .complemento-sobre img {
-        width: 100%;
+        width: 300px;
+        height: 300px;
     }
     
     .headline-servicos,
