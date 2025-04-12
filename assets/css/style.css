@@ -596,8 +596,15 @@ a {
     color: #0077b5;
 }
 
+.redes-sociais a[href*="wa.me"]:hover,
 .redes-sociais a[href*="whatsapp"]:hover {
-    color: #0bbc4c;
+    color: #0bbc4c; 
+}
+
+/* Para estilizar também o ícone da seta */
+.redes-sociais a[href*="wa.me"]:hover i,
+.redes-sociais a[href*="whatsapp"]:hover i {
+    color: #0bbc4c !important; 
 }
 
 .right-sobre {
