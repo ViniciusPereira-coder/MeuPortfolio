@@ -508,24 +508,96 @@ a {
     letter-spacing: 1.5px;
 }
 
+/* Adicione isso ao seu arquivo style.css */
+
 .redes-sociais {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
     gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .redes-sociais a {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     text-decoration: none;
     color: var(--color-gray2);
     font-size: 1.5rem;
     width: 100%;
-    padding-bottom: 5px;
+    padding: 12px 0;
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Efeito de preenchimento ao passar o mouse */
+.redes-sociais a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: all 0.6s ease;
+}
+
+.redes-sociais a:hover::before {
+    left: 100%;
+}
+
+/* Animação do texto e ícone */
+.redes-sociais a:hover {
+    color: var(--color-white);
+    transform: translateX(10px);
+}
+
+.redes-sociais a i {
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.redes-sociais a:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Efeito de sublinhado animado */
+.redes-sociais a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-white);
+    transition: width 0.4s ease;
+}
+
+.redes-sociais a:hover::after {
+    width: 100%;
+}
+
+/* Efeito específico para cada rede social */
+.redes-sociais a[href*="instagram"]:hover {
+    color: #E1306C;
+}
+
+.redes-sociais a[href*="github"]:hover {
+    color: #ca19a4;
+}
+
+.redes-sociais a[href*="linkedin"]:hover {
+    color: #0077b5;
+}
+
+.redes-sociais a[href*="whatsapp"]:hover {
+    color: #0bbc4c;
 }
 
 .right-sobre {
