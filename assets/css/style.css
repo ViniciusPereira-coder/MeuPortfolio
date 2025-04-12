@@ -508,24 +508,103 @@ a {
     letter-spacing: 1.5px;
 }
 
+/* Adicione isso ao seu arquivo style.css */
+
 .redes-sociais {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
     gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .redes-sociais a {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     text-decoration: none;
     color: var(--color-gray2);
     font-size: 1.5rem;
     width: 100%;
-    padding-bottom: 5px;
+    padding: 12px 0;
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Efeito de preenchimento ao passar o mouse */
+.redes-sociais a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: all 0.6s ease;
+}
+
+.redes-sociais a:hover::before {
+    left: 100%;
+}
+
+/* Animação do texto e ícone */
+.redes-sociais a:hover {
+    color: var(--color-white);
+    transform: translateX(10px);
+}
+
+.redes-sociais a i {
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.redes-sociais a:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Efeito de sublinhado animado */
+.redes-sociais a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-white);
+    transition: width 0.4s ease;
+}
+
+.redes-sociais a:hover::after {
+    width: 100%;
+}
+
+/* Efeito específico para cada rede social */
+.redes-sociais a[href*="instagram"]:hover {
+    color: #E1306C;
+}
+
+.redes-sociais a[href*="github"]:hover {
+    color: #ca19a4;
+}
+
+.redes-sociais a[href*="linkedin"]:hover {
+    color: #0077b5;
+}
+
+.redes-sociais a[href*="wa.me"]:hover,
+.redes-sociais a[href*="whatsapp"]:hover {
+    color: #0bbc4c; 
+}
+
+/* Para estilizar também o ícone da seta */
+.redes-sociais a[href*="wa.me"]:hover i,
+.redes-sociais a[href*="whatsapp"]:hover i {
+    color: #0bbc4c !important; 
 }
 
 .right-sobre {
@@ -1029,331 +1108,407 @@ a {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    padding: 6rem 1rem 2rem;
+    padding: 6rem 1rem;
     align-items: center;
     justify-content: center;
     background-color: var(--color-white);
 }
 
-.container-contato {
+.contato-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
     width: 100%;
     max-width: 1400px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: none;
+    margin: 0 auto;
     padding: 0 1rem;
 }
 
-.headline-contato {
-    width: 100%;
-    min-height: 20vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-}
-
-.titulo-contato {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.titulo-contato h1 {
-    color: var(--color-black);
-    font-size: clamp(3rem, 8vw, 8rem);
-    font-weight: lighter;
-    font-family: var(--font-grande);
-}
-
-.descricao-contato {
-    width: 50%;
-    text-align: right;
-}
-
-.lista-contato {
-    list-style: none;
-}
-
-.lista-contato li {
-    margin-bottom: 1rem;
-}
-
-.lista-contato a {
-    text-decoration: none;
-    color: var(--color-black);
-    font-size: 1.5rem;
-    letter-spacing: 1.5px;
-    line-height: 1.4;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.lista-contato a:hover {
-    color: var(--color-destaque2);
-}
-
-.conteudo-contato {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem 0;
-}
-
-.formulario-contato {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.5rem;
+.contato-form {
     padding: 2rem;
 }
 
-.formulario-contato h2 {
-    font-size: 2.5rem;
-    color: var(--color-black);
+.contato-form h2 {
+    font-family: var(--font-grande);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     margin-bottom: 1rem;
+    color: var(--color-black);
+    font-weight: normal;
 }
 
-.formulario-contato p {
-    font-size: 1.2rem;
+.subtitulo {
     color: var(--color-gray1);
-    font-weight: 500;
-    line-height: 1.4;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.form-group {
+    position: relative;
     margin-bottom: 2rem;
 }
 
-.form {
+.form-group input,
+.form-group textarea {
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.form input,
-.form textarea {
+    padding: 1rem;
+    border: none;
+    border-bottom: 2px solid var(--color-gray2);
+    background: transparent;
     font-family: var(--font-pequena);
-    width: 100%;
-    border-radius: 30px;
-    outline: none;
-    border: 2px solid rgba(128, 128, 128, 0.5);
-    padding: 1.2rem 1.5rem;
     font-size: 1.1rem;
-    transition: border-color 0.3s ease;
-}
-
-.form input:focus,
-.form textarea:focus {
-    border-color: var(--color-destaque2);
-}
-
-.form textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.btn {
-    background-color: var(--color-destaque1);
-    color: var(--color-black);
-    font-weight: bold;
-    width: 190px;
-    padding: 1rem 0;
-    border: 2px solid rgba(128, 128, 128, 0.5);
-    outline: none;
-    border-radius: 30px;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.btn:hover {
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: var(--color-gray2);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-family: var(--font-pequena);
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:valid ~ label {
+    top: -1.2rem;
+    left: 0;
+    font-size: 0.8rem;
+    color: var(--color-destaque2);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: var(--color-destaque2);
+    outline: none;
+}
+
+.cta-button {
+    position: relative;
+    margin-top: 1rem;
+    padding: 15px 30px;
+    border: 1px solid var(--color-destaque2);
+    border-radius: 50px;
+    background-color: transparent;
+    color: var(--color-destaque2);
+    font-family: var(--font-pequena);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cta-button:hover {
     background-color: var(--color-destaque2);
     color: var(--color-white);
 }
 
-.logo-contato {
-    width: 50%;
-    height: 100%;
+.contato-info {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
 }
 
-.logo-contato img {
+.info-card {
+    background: var(--color-destaque1);
+    padding: 2.5rem;
+    border-radius: 20px;
     width: 100%;
-    max-width: 500px;
-    border-radius: 36px;
-    object-fit: cover;
+    max-width: 400px;
 }
 
-/*************** FOOTER *****/
-.footer {
-    background-color: var(--color-black);
-    width: 100%;
-    padding: 3rem 1rem;
-    color: var(--color-white);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.container-footer {
-    width: 100%;
-    max-width: 1400px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
+.info-card h3 {
+    font-family: var(--font-grande);
+    font-size: 1.8rem;
     margin-bottom: 2rem;
+    color: var(--color-black);
+    font-weight: normal;
+}
+
+.info-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--color-destaque2);
+}
+
+.info-item h4 {
+    font-size: 1rem;
+    color: var(--color-gray1);
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+}
+
+.info-item p {
+    font-size: 1rem;
+    color: var(--color-black);
+    font-family: var(--font-pequena);
+}
+
+.redes-contato {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.redes-contato a {
+    color: var(--color-black);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.redes-contato a:hover {
+    color: var(--color-destaque2);
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .contato-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contato-form, .contato-info {
+        padding: 1rem;
+    }
+    
+    .info-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contato {
+        padding: 4rem 1rem;
+    }
+    
+    .contato-form h2 {
+        font-size: 2rem;
+    }
+    
+    .info-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Mantenha o footer existente abaixo */
+/*************** FOOTER *****/
+/*************** FOOTER ***************/
+.footer {
+    background-color: var(--color-destaque2);
+    color: var(--color-white);
+    padding: 4rem 1rem 0;
+    position: relative;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem 3rem;
 }
 
 .footer-column {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
 }
 
-.logo-column img {
+.footer-logo {
     width: 150px;
-    height: auto;
     margin-bottom: 1rem;
+    filter: brightness(0) invert(1);
+}
+
+.footer-slogan {
+    font-family: var(--font-pequena);
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.footer-social a {
+    color: var(--color-white);
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--color-destaque1);
+    transform: translateY(-3px);
+}
+
+.footer-title {
+    font-family: var(--font-grande);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--color-destaque1);
 }
 
 .footer-nav {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
-.footer-nav a {
+.footer-link {
+    color: rgba(255,255,255,0.7);
     text-decoration: none;
+    font-family: var(--font-pequena);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
     color: var(--color-white);
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+    transform: translateX(5px);
 }
 
-.footer-nav a:hover {
-    color: var(--color-destaque1);
-}
-
-.social-links {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.social-links a {
-    text-decoration: none;
-    color: var(--color-white);
-    font-size: 1.1rem;
+.footer-contact p {
     display: flex;
     align-items: center;
-    transition: color 0.3s ease;
+    gap: 0.8rem;
+    color: rgba(255,255,255,0.7);
+    font-family: var(--font-pequena);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
 }
 
-.social-links a i {
-    margin-right: 0.5rem;
-}
-
-.social-links a:hover {
+.footer-contact i {
+    font-size: 1.1rem;
     color: var(--color-destaque1);
 }
 
-.credits-column {
-    width: 100%;
-    text-align: center;
-    font-size: 0.9rem;
-    padding-top: 2rem;
-    border-top: 1px solid hsla(0, 0%, 100%, 0.15);
+.footer-text {
+    color: rgba(255,255,255,0.7);
+    font-family: var(--font-pequena);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
-.credits-column p {
-    margin: 0.5rem 0;
+.footer-form {
+    display: flex;
+    width: 100%;
+}
+
+.footer-form input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-family: var(--font-pequena);
+}
+
+.footer-button {
+    background: var(--color-destaque1);
+    color: var(--color-black);
+    border: none;
+    padding: 0 1.2rem;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer-button:hover {
+    background: var(--color-white);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 1.5rem 0;
+    text-align: center;
+    font-family: var(--font-pequena);
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-legal {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.8rem;
+}
+
+.footer-legal a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--color-white);
+}
+
+.footer-legal span {
+    color: rgba(255,255,255,0.3);
 }
 
 /* Responsividade */
-@media (max-width: 1024px) {
-    .header {
-        padding: 1.5rem 1rem;
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
     }
     
-    .conteudo-sobre {
-        flex-direction: column;
-        margin-top: 15%;
+    .footer-column {
+        margin-bottom: 2rem;
     }
     
-    .left-sobre,
-    .right-sobre {
-        width: 100%;
-        padding: 20px;
+    .footer-social {
+        justify-content: center;
     }
-    
-    .imagem-sobre {
-        width: 300px;
-        height: 300px;
-    }
-    
-    .headline-servicos,
-    .headline-portfolio,
-    .headline-contato {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    
-    .titulo-servicos,
-    .titulo-contato,
-    .headline-portfolio .titulo,
-    .descricao-servicos,
-    .headline-portfolio .descricao,
-    .descricao-contato {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .card-servicos,
-    .card-servicos-left {
-        width: 100%;
-        margin: 0;
-    }
-    
-    .case1,
-    .case2,
-    .case3,
-    .case4 {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    
-    .imagens-case,
-    .textos-case {
-        width: 100%;
-    }
-    
-    .conteudo-contato {
-        flex-direction: column;
-    }
-    
-    .formulario-contato,
-    .logo-contato {
-        width: 100%;
-    }
-    
-    .container-footer {
-        flex-direction: column;
-        gap: 2rem;
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        grid-template-columns: 1fr;
     }
     
     .footer-column {
@@ -1361,55 +1516,12 @@ a {
         text-align: center;
     }
     
-    .footer-nav,
-    .social-links {
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-nav {
         align-items: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .headline-scroll span {
-        font-size: 3rem;
-    }
-    
-    .textos-sobre h1 {
-        font-size: 2rem;
-    }
-    
-    .textos-sobre p {
-        font-size: 1.2rem;
-    }
-    
-    .redes-sociais a {
-        font-size: 1.2rem;
-    }
-    
-    .box-skills {
-        min-height: 250px;
-        padding: 1.5rem;
-    }
-    
-    .box-skills i {
-        font-size: 3rem;
-    }
-    
-    .box-skills h3 {
-        font-size: 1.5rem;
-    }
-    
-    .box-skills p {
-        font-size: 1rem;
-    }
-    
-    .conteudo-textos-case h1 {
-        font-size: 2.5rem;
-    }
-    
-    .conteudo-textos-case p {
-        font-size: 1rem;
-    }
-    
-    .lista-contato a {
-        font-size: 1.2rem;
     }
 }
