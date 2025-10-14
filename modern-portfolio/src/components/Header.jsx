@@ -28,11 +28,51 @@ const Header = () => {
         animate={isMenuOpen ? { height: '100vh', opacity: 1 } : { height: 0, opacity: 0 }}
       >
         <div className="nav-menu flex flex-col items-center justify-center gap-16">
-          <a href="#inicio" className="text-white text-6xl font-bold opacity-0 transform translate-y-5 transition-all duration-500 hover:text-gray-300" style={{ animationDelay: '0.1s' }}>INÍCIO</a>
-          <a href="#sobre" className="text-white text-6xl font-bold opacity-0 transform translate-y-5 transition-all duration-500 hover:text-gray-300" style={{ animationDelay: '0.2s' }}>SOBRE</a>
-          <a href="#servicos" className="text-white text-6xl font-bold opacity-0 transform translate-y-5 transition-all duration-500 hover:text-gray-300" style={{ animationDelay: '0.3s' }}>SERVIÇOS</a>
-          <a href="#portfolio" className="text-white text-6xl font-bold opacity-0 transform translate-y-5 transition-all duration-500 hover:text-gray-300" style={{ animationDelay: '0.4s' }}>PORTFOLIO</a>
-          <a href="#contato" className="text-white text-6xl font-bold opacity-0 transform translate-y-5 transition-all duration-500 hover:text-gray-300" style={{ animationDelay: '0.5s' }}>CONTATO</a>
+          <motion.a
+            href="#inicio"
+            className="text-white text-6xl font-bold hover:text-gray-300"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 0.1 }}
+          >
+            INÍCIO
+          </motion.a>
+          <motion.a
+            href="#sobre"
+            className="text-white text-6xl font-bold hover:text-gray-300"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 0.2 }}
+          >
+            SOBRE
+          </motion.a>
+          <motion.a
+            href="#servicos"
+            className="text-white text-6xl font-bold hover:text-gray-300"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 0.3 }}
+          >
+            SERVIÇOS
+          </motion.a>
+          <motion.a
+            href="#portfolio"
+            className="text-white text-6xl font-bold hover:text-gray-300"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 0.4 }}
+          >
+            PORTFOLIO
+          </motion.a>
+          <motion.a
+            href="#contato"
+            className="text-white text-6xl font-bold hover:text-gray-300"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 0.5 }}
+          >
+            CONTATO
+          </motion.a>
         </div>
       </motion.nav>
     </header>

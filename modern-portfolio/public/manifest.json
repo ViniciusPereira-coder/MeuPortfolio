@@ -1,0 +1,67 @@
+{
+  "name": "Vinicius Pereira - Arquitetura de Experiências Digitais",
+  "short_name": "Vinicius Pereira",
+  "description": "Especialista em Qualidade de Software e desenvolvimento front-end, criando experiências digitais marcantes e funcionais.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/assets/img/logonovapng.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/img/logonovapng.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/img/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/assets/img/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contato",
+      "short_name": "Contato",
+      "description": "Entre em contato diretamente",
+      "url": "/#contato",
+      "icons": [
+        {
+          "src": "/assets/img/logonovapng.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Portfolio",
+      "short_name": "Portfolio",
+      "description": "Veja meus trabalhos",
+      "url": "/#portfolio",
+      "icons": [
+        {
+          "src": "/assets/img/logonovapng.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

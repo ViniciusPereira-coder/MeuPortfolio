@@ -11,13 +11,13 @@ const About = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="flex whitespace-nowrap animate-scroll">
-            <span className="text-6xl md:text-8xl font-bold text-white mx-4">QUALIDADE</span>
-            <span className="text-6xl md:text-8xl font-light text-gray-400 mx-4">INOVAÇÃO</span>
-            <span className="text-6xl md:text-8xl font-bold text-white mx-4">PRECISÃO</span>
-            <span className="text-6xl md:text-8xl font-light text-gray-400 mx-4">CRIATIVIDADE</span>
-            <span className="text-6xl md:text-8xl font-bold text-white mx-4">EXCELÊNCIA</span>
-            <span className="text-6xl md:text-8xl font-light text-gray-400 mx-4">TECNOLOGIA</span>
+          <div className="flex whitespace-nowrap">
+            <span className="text-4xl md:text-6xl font-bold text-white mx-4 animate-pulse">QUALIDADE</span>
+            <span className="text-4xl md:text-6xl font-light text-gray-400 mx-4">INOVAÇÃO</span>
+            <span className="text-4xl md:text-6xl font-bold text-white mx-4 animate-pulse">PRECISÃO</span>
+            <span className="text-4xl md:text-6xl font-light text-gray-400 mx-4">CRIATIVIDADE</span>
+            <span className="text-4xl md:text-6xl font-bold text-white mx-4 animate-pulse">EXCELÊNCIA</span>
+            <span className="text-4xl md:text-6xl font-light text-gray-400 mx-4">TECNOLOGIA</span>
           </div>
         </motion.div>
 

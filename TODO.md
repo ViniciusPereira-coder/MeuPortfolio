@@ -9,6 +9,7 @@
 - [x] Criar pasta src/components/
 - [x] Criar componentes: Header, Hero, About, Skills, Services, Portfolio, Contact, Footer
 - [x] Migrar conteúdo do HTML para componentes React
+- [x] Copiar assets do portfólio antigo para o novo
 
 ## Etapa 3: Animações e Interatividade
 - [x] Implementar Framer Motion para animações de entrada/saída
@@ -17,9 +18,9 @@
 - [x] Parallax scrolling em seções
 
 ## Etapa 4: UI Moderna
-- [ ] Aplicar glassmorphism no header e cards
-- [ ] Gradientes dinâmicos e tipografia responsiva
-- [ ] Melhorar responsividade com Tailwind
+- [x] Aplicar glassmorphism no header e cards
+- [x] Gradientes dinâmicos e tipografia responsiva
+- [x] Melhorar responsividade com Tailwind
 
 ## Etapa 5: Otimização e Extras
 - [ ] Lazy loading de imagens
