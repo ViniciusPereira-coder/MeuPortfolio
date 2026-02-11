@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Vinicius Pereira, especialista em Qualidade de Software e desenvolvimento front-end.">
     <title>Vinicius Pereira | Arquitetura de Experiências Digitais</title>
+
+    <!-- Bootstrap 5 (framework visual) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!--CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -19,7 +23,9 @@
     
 </head>
 
-<body>
+<body class="theme-luxe">
+
+    <a class="skip-link" href="#inicio">Pular para o conteúdo principal</a>
 
     <!--Botão voltar ao topo-->
     <div id="backToTop" class="fixed-button">
@@ -47,7 +53,7 @@
                 <img src="./assets/img/logonovapng.png" alt="Logo">
             </div>
             <div class="menu">
-                <label class="hamburger">
+                <label class="hamburger" aria-label="Abrir menu de navegação">
                     <input type="checkbox" id="menuToggle">
                     <svg viewBox="0 0 32 32">
                         <path class="line line-top-bottom"
@@ -77,11 +83,12 @@
             <div class="titulo-inicio">
                 <h1>Vinicius Pereira</h1>
                 <h1 class="destaque-inicio">Arquiteto de Experiências Digitais</h1>
+                <span class="hero-badge">Design moderno + performance + qualidade</span>
             </div>
             <div class="paragrafo-inicio" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                 <p>Transformo ideias em sistemas que funcionam, páginas que encantam e testes que asseguram confiança. Cada projeto carrega uma entrega acima do esperado.</p>
             </div>
-            <a href="#contato" class="cta" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+            <a href="#contato" class="cta shadow-lg" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                 <span>Fale Comigo</span>
                 <svg width="15px" height="10px" viewBox="0 0 13 10">
                     <path d="M1,5 L11,5"></path>
@@ -98,7 +105,7 @@
         <!--Fim Início-->
 
         <!--Sobre-->
-        <section id="sobre" class="sobre">
+        <section id="sobre" class="sobre section-shell">
             <div class="container-sobre">
                 <!-- Headline (mantida igual) -->
                 <div class="headline-sobre" data-aos="fade-up" data-aos-duration="1000">
@@ -124,10 +131,10 @@
                             <p>Especialista em Qualidade de Software e desenvolvimento front-end, combino visão técnica com paixão por inovação para criar experiências digitais marcantes e funcionais.</p>
                         </div>
                         <div class="redes-sociais">
-                            <a href="https://www.instagram.com/ninicius_?igsh=NndmeDR0cjJ1azFo&utm_source=qr" target="_blank">INSTAGRAM<i class="bi bi-arrow-right"></i></a>
-                            <a href="https://github.com/ViniciusPereira-coder" target="_blank">GITHUB<i class="bi bi-arrow-right"></i></a>
-                            <a href="https://www.linkedin.com/in/vinicius-de-moraes-10b50b151/r" target="_blank">LINKEDLN<i class="bi bi-arrow-right"></i></a>
-                            <a href="https://wa.me/5511930222977" class="whatsapp-link" target="_blank">WHATSAPP<i class="bi bi-arrow-right"></i></a>
+                            <a href="https://www.instagram.com/ninicius_?igsh=NndmeDR0cjJ1azFo&utm_source=qr" target="_blank" rel="noopener noreferrer">INSTAGRAM<i class="bi bi-arrow-right"></i></a>
+                            <a href="https://github.com/ViniciusPereira-coder" target="_blank" rel="noopener noreferrer">GITHUB<i class="bi bi-arrow-right"></i></a>
+                            <a href="https://www.linkedin.com/in/vinicius-de-moraes-10b50b151/" target="_blank" rel="noopener noreferrer">LINKEDIN<i class="bi bi-arrow-right"></i></a>
+                            <a href="https://wa.me/5511930246426" class="whatsapp-link" target="_blank" rel="noopener noreferrer">WHATSAPP<i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="right-sobre" data-aos="fade-left" data-aos-duration="1000">
@@ -150,7 +157,7 @@
         <!--Fim Sobre-->
 
         <!--Skills-->
-        <section id="skills" class="skills">
+        <section id="skills" class="skills section-shell">
             <div class="container-skills" data-aos="fade-up" data-aos-duration="1000">
                 <div class="headline-skills">
                     <div class="text-headline-skills" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
@@ -185,7 +192,7 @@
         <!--Fim Skills-->
 
         <!--Serviços-->
-        <section id="servicos" class="servicos">
+        <section id="servicos" class="servicos section-shell">
             <div class="container-servicos">
                 <div class="headline-servicos" data-aos="fade-up" data-aos-duration="1000">
                     <div class="titulo-servicos">
@@ -264,7 +271,7 @@
         <!--Fim FREE YOUR MIND-->
 
         <!--Portfolio-->
-        <section id="portfolio" class="portfolio">
+        <section id="portfolio" class="portfolio section-shell">
             <div class="container-portfolio" data-aos="fade-up" data-aos-duration="1000">
                 <div class="headline-portfolio">
                     <h1 class="titulo">Portfolio</h1>
@@ -276,9 +283,9 @@
                         <div class="imagens-case">
                             <div class="slide">
                                 <i class="bi bi-chevron-left prev"></i>
-                                <img src="assets/img/projeto1-1.png" alt="Projeto 1 - Imagem 1">
-                                <img src="assets/img/projeto1-2.png" alt="Projeto 1 - Imagem 2">
-                                <img src="assets/img/projeto1-3.png" alt="Projeto 1 - Imagem 3">
+                                <img src="assets/img/imagem.png" alt="Projeto landing page - prévia 1" loading="lazy">
+                                <img src="assets/img/Imagem.jpg" alt="Projeto landing page - prévia 2" loading="lazy">
+                                <img src="assets/img/FOTOS PARA O SITE.png" alt="Projeto landing page - prévia 3" loading="lazy">
                                 <i class="bi bi-chevron-right next"></i>
                             </div>
                         </div>
@@ -296,7 +303,7 @@
                             <div class="conteudo-textos-case">
                                 <h1>Cypress</h1>
                                 <p>
-                                Especializado em testes automatizados com Cypress, assegurando aplicações web estáveis e eficientes..
+                                Especializado em testes automatizados com Cypress, assegurando aplicações web estáveis e eficientes.
 
                                 </p>
                                 <span>QA Automation</span>
@@ -305,9 +312,9 @@
                         <div class="imagens-case">
                             <div class="slide">
                                 <i class="bi bi-chevron-left prev"></i>
-                                <img src="assets/img/projeto2-1.png" alt="Projeto 2 - Imagem 1">
-                                <img src="assets/img/projeto2-2.png" alt="Projeto 2 - Imagem 2">
-                                <img src="assets/img/projeto2-3.png" alt="Projeto 2 - Imagem 3">
+                                <img src="assets/img/qr_code_rmdeveloper.png" alt="Projeto Cypress - relatório de execução" loading="lazy">
+                                <img src="assets/img/QR CODE.png" alt="Projeto Cypress - validações automatizadas" loading="lazy">
+                                <img src="assets/img/VP BRANCO E PRETO.png" alt="Projeto Cypress - painel de qualidade" loading="lazy">
                                 <i class="bi bi-chevron-right next"></i>
                             </div>
                         </div>
@@ -317,16 +324,16 @@
                         <div class="imagens-case">
                             <div class="slide">
                                 <i class="bi bi-chevron-left prev"></i>
-                                <img src="assets/img/projeto3-1.png" alt="Projeto 3 - Imagem 1">
-                                <img src="assets/img/projeto3-2.png" alt="Projeto 3 - Imagem 2">
-                                <img src="assets/img/projeto3-3.png" alt="Projeto 3 - Imagem 3">
+                                <img src="assets/img/Minha foto.jpg" alt="Projeto institucional - interface principal" loading="lazy">
+                                <img src="assets/img/sua-foto.png" alt="Projeto institucional - seção sobre" loading="lazy">
+                                <img src="assets/img/Trocando foto.jpg" alt="Projeto institucional - versão mobile" loading="lazy">
                                 <i class="bi bi-chevron-right next"></i>
                             </div>
                         </div>
                         <div class="textos-case">
                             <div class="conteudo-textos-case">
-                                <h1>A colocar algo</h1>
-                                <p>To pensando o que eu vou colocar</p>
+                                <h1>Site Institucional</h1>
+                                <p>Projeto de presença digital focado em clareza da mensagem, desempenho e experiência responsiva.</p>
                                 <span>Web Design</span>
                             </div>
                         </div>
@@ -335,17 +342,17 @@
                     <div class="case4" data-aos="fade-left" data-aos-delay="500">
                         <div class="textos-case">
                             <div class="conteudo-textos-case">
-                                <h1>Eu tambem to pensando no que colcoar</h1>
-                                <p>Socorro Deus</p>
+                                <h1>Rebranding Visual</h1>
+                                <p>Criação e evolução de identidade visual aplicada ao ambiente digital com foco em consistência.</p>
                                 <span>Front-end</span>
                             </div>
                         </div>
                         <div class="imagens-case">
                             <div class="slide">
                                 <i class="bi bi-chevron-left prev"></i>
-                                <img src="assets/img/projeto4-1.png" alt="Projeto 4 - Imagem 1">
-                                <img src="assets/img/projeto4-2.png" alt="Projeto 4 - Imagem 2">
-                                <img src="assets/img/projeto4-3.png" alt="Projeto 4 - Imagem 3">
+                                <img src="assets/img/logonovapng.png" alt="Projeto de rebranding - versão logo 1" loading="lazy">
+                                <img src="assets/img/SUA-LOGO-AQUI.png" alt="Projeto de rebranding - versão logo 2" loading="lazy">
+                                <img src="assets/img/complemento-esquerda.png" alt="Projeto de rebranding - peça gráfica" loading="lazy">
                                 <i class="bi bi-chevron-right next"></i>
                             </div>
                         </div>
@@ -357,7 +364,7 @@
 
         <!--Contato-->
         <!-- Seção Contato -->
-<section id="contato" class="contato">
+<section id="contato" class="contato section-shell">
     <div class="contato-content">
         <!-- Lado Esquerdo - Formulário -->
         <div class="contato-form" data-aos="fade-right">
@@ -423,16 +430,16 @@
                 </div>
                 
                 <div class="redes-contato">
-                    <a href="https://github.com/ViniciusPereira-coder" target="_blank" aria-label="GitHub">
+                    <a href="https://github.com/ViniciusPereira-coder" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <i class="bi bi-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/vinicius-de-moraes-10b50b151/" target="_blank" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/vinicius-de-moraes-10b50b151/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <i class="bi bi-linkedin"></i>
                     </a>
-                    <a href="https://www.instagram.com/ninicius_?igsh=NndmeDR0cjJ1azFo" target="_blank" aria-label="Instagram">
+                    <a href="https://www.instagram.com/ninicius_?igsh=NndmeDR0cjJ1azFo" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <i class="bi bi-instagram"></i>
                     </a>
-                    <a href="https://wa.me/5511930246426" target="_blank" aria-label="WhatsApp">
+                    <a href="https://wa.me/5511930246426" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <i class="bi bi-whatsapp"></i>
                     </a>
                 </div>
@@ -442,23 +449,23 @@
 </section>
         <!--Fim Contato-->
 
-        <footer class="footer">
+        <footer class="footer section-shell footer-shell">
             <div class="footer-container">
                 <!-- Coluna do Logo -->
                 <div class="footer-column logo-column" data-aos="fade-up">
                     <img src="assets/img/logonovapng.png" alt="Vinicius Pereira - Logo" class="footer-logo">
                     <p class="footer-slogan">Arquitetura de Experiências Digitais</p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/ninicius_" target="_blank" aria-label="Instagram">
+                        <a href="https://www.instagram.com/ninicius_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <i class="bi bi-instagram"></i>
                         </a>
-                        <a href="https://github.com/ViniciusPereira-coder" target="_blank" aria-label="GitHub">
+                        <a href="https://github.com/ViniciusPereira-coder" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                             <i class="bi bi-github"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/vinicius-de-moraes-10b50b151/" target="_blank" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/vinicius-de-moraes-10b50b151/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <i class="bi bi-linkedin"></i>
                         </a>
-                        <a href="https://wa.me/5511930246426" target="_blank" aria-label="WhatsApp">
+                        <a href="https://wa.me/5511930246426" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                             <i class="bi bi-whatsapp"></i>
                         </a>
                     </div>
@@ -486,11 +493,9 @@
                     </div>
                 </div>
         
-                <!-- Coluna de Newsletter (Opcional) -->
                 <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
-              
-                        </button>
-                    </form>
+                    <h3 class="footer-title">Disponibilidade</h3>
+                    <p class="footer-availability">Projetos remotos, consultoria e colaboração em times ágeis.</p>
                 </div>
             </div>
         
@@ -508,8 +513,6 @@
 
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -517,6 +520,9 @@
     <script>
         AOS.init();
     </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <!--JavaScript-->
     <script src="assets/js/header.js"></script>
