@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slide');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
     slides.forEach((slide) => {
         let currentIndex = 0;
@@ -7,6 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const nextButton = slide.querySelector('.next');
         const prevButton = slide.querySelector('.prev');
         const intervalTime = 3000;
+
+        if (!images.length || !nextButton || !prevButton) {
+            return;
+        }
 
         // Função para mostrar a imagem atual
         function showSlide(index) {
@@ -28,10 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Slideshow automático
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % images.length;
-            showSlide(currentIndex);
-        }, intervalTime);
+        if (!prefersReducedMotion) {
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                showSlide(currentIndex);
+            }, intervalTime);
+        }
 
         // Exibe o slide inicial
         showSlide(currentIndex);

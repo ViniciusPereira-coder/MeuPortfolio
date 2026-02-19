@@ -1,12 +1,15 @@
-/* Responsividade para iPad (tablet) e dispositivos menores */
+/* Responsividade para tablet e dispositivos menores */
 @media (max-width: 1024px) {
     .container {
         padding: 0 1rem;
     }
 
-    /************************** GERAL ***/
     .header {
-        padding: 1.5rem 1rem;
+        padding: 1rem 1.25rem;
+    }
+
+    .header-inner {
+        max-width: 100%;
     }
 
     /************************** INÍCIO ***/
@@ -22,66 +25,13 @@
         padding-bottom: 2rem;
     }
 
-    /************************** SOBRE ***/
-    .sobre {
-        height: auto;
-        min-height: 100vh;
-        padding-top: 6rem;
+    .hero-metrics {
+        grid-template-columns: 1fr;
     }
 
-    .container-sobre {
-        height: auto;
-    }
-    
-    .headline-sobre {
-        height: auto;
-        position: relative;
-        margin-bottom: 3rem;
-    }
-
-    .headline-scroll span {
-        font-size: 3.5rem;
-    }
-
-    .conteudo-sobre {
-        flex-direction: column;
-        height: auto;
-        gap: 3rem;
-        margin-top: 0;
-    }
-
-    .left-sobre {
-        width: 100%;
-        height: auto;
-        padding: 1rem;
-    }
-
-    .right-sobre {
-        width: 100%;
-        height: auto;
-        padding: 1rem;
-    }
-
-    .imagem-sobre {
-        position: relative;
-        justify-content: center;
-    }
-
-    .imagem-sobre img {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .complemento-sobre {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .complemento-sobre img {
-        position: unset;
-        width: 60%;
-        max-width: 300px;
+    /************************** DIFERENCIAIS ***/
+    .diferenciais {
+        padding: 5rem 1rem;
     }
 
     /************************** SKILLS ***/
@@ -94,7 +44,6 @@
     }
 
     .box-skills {
-        height: auto;
         min-height: 300px;
     }
 
@@ -108,6 +57,7 @@
         height: auto;
         gap: 2rem;
         margin-bottom: 2rem;
+        align-items: flex-start;
     }
 
     .titulo-servicos {
@@ -167,6 +117,7 @@
         height: auto;
         gap: 2rem;
         margin-bottom: 2rem;
+        align-items: flex-start;
     }
 
     .headline-portfolio .titulo {
@@ -196,11 +147,6 @@
         height: auto;
     }
 
-    .case2,
-    .case4 {
-        flex-direction: column;
-    }
-    
     .imagens-case {
         width: 100%;
         height: 50vh;
@@ -215,116 +161,49 @@
     .conteudo-textos-case h1 {
         font-size: clamp(2rem, 8vw, 4rem);
     }
+}
 
-    /************************** CONTATO ***/
-    .contato {
-        padding: 6rem 1rem 2rem;
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .container-contato {
-        height: auto;
-    }
-
-    .headline-contato {
-        flex-direction: column;
-        height: auto;
-        gap: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .titulo-contato {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
-    .titulo-contato h1 {
-        font-size: clamp(3rem, 10vw, 6rem);
-        width: 100%;
-    }
-
-    .descricao-contato {
-        width: 100%;
+@media (max-width: 1200px) {
+    .descricao-servicos,
+    .headline-portfolio .descricao {
         text-align: left;
-    }
-
-    .descricao-contato a {
-        font-size: 1.4rem;
-    }
-
-    .conteudo-contato {
-        padding-top: 2rem;
-        flex-direction: column;
-        gap: 3rem;
-    }
-
-    .logo-contato {
-        width: 100%;
-        justify-content: center;
-        padding: 0;
-    }
-
-    .logo-contato img {
-        width: 100%;
-        max-height: 400px;
-        object-fit: cover;
-    }
-
-    .formulario-contato {
-        width: 100%;
-        padding: 0;
-    }
-
-    /************************** FOOTER ***/
-    .footer {
-        padding: 3rem 1rem;
-    }
-
-    .container-footer {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .footer-column {
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-nav,
-    .social-links {
-        align-items: center;
-    }
-
-    .credits-column {
-        width: 100%;
-        text-align: center;
-        margin-top: 2rem;
     }
 }
 
 /* Responsividade para mobile */
 @media (max-width: 768px) {
+    .header {
+        padding: 0.875rem 1rem;
+    }
+
     .logo img {
         width: 120px;
     }
 
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hamburger-line {
+        width: 22px;
+    }
+
     .nav-menu a {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
-    .headline-scroll span {
-        font-size: 2.5rem;
+    .hero-chips span {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.75rem;
     }
 
-    .textos-sobre h1 {
-        font-size: 2.5rem;
+    .cta-group {
+        flex-direction: column;
     }
 
-    .textos-sobre p {
-        font-size: 1.2rem;
+    .hero-metrics {
+        grid-template-columns: 1fr;
     }
 
     .conteudo-skills {
@@ -349,7 +228,7 @@
         width: 80px;
     }
 
-    .container-free-your-mind span {
+    .container-free-your-mind span:not(.line) {
         font-size: clamp(2rem, 12vw, 8rem);
     }
 
@@ -361,56 +240,55 @@
         height: 40vh;
     }
 
-    .descricao-contato a {
-        font-size: 1.2rem;
+    .case-link {
+        width: 100%;
+        text-align: center;
     }
 
-    .formulario-contato h2 {
-        font-size: 2rem;
-    }
-
-    .formulario-contato p {
-        font-size: 1.1rem;
-    }
 }
 
 /* Ajustes para telas muito pequenas */
 @media (max-width: 480px) {
     .header {
-        padding: 1rem;
+        padding: 0.75rem 1rem;
     }
 
     .logo img {
         width: 100px;
     }
 
+    .menu-toggle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .hamburger-line {
+        width: 20px;
+    }
+
+    .nav-menu {
+        gap: 2rem;
+    }
+
     .nav-menu a {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
-    .headline-scroll span {
-        font-size: 2rem;
+    .hero-chips {
+        gap: 0.5rem;
     }
 
-    .headline-scroll .divisor {
-        width: 10px;
-        height: 10px;
-        margin: 0 10px;
-    }
-
-    .textos-sobre h1 {
-        font-size: 2rem;
+    .hero-metrics {
+        gap: 0.8rem;
     }
 
     .titulo-servicos h1,
-    .headline-portfolio .titulo,
-    .titulo-contato h1 {
+    .headline-portfolio .titulo {
         font-size: clamp(2.5rem, 12vw, 4rem);
     }
 
     .descricao-servicos,
-    .headline-portfolio .descricao,
-    .descricao-contato a {
+    .headline-portfolio .descricao {
         font-size: 1.1rem;
     }
 
@@ -434,6 +312,11 @@
         font-size: 1rem;
     }
 
+    .case-link {
+        width: 100%;
+        text-align: center;
+    }
+
     .fixed-button {
         width: 45px;
         height: 45px;
@@ -442,64 +325,5 @@
     .fixed-button i {
         font-size: 20px;
     }
-
-
-    @media (max-width: 768px) {
-        .imagem-sobre {
-            width: 250px;
-            height: 250px;
-        }
-    }
-
-/* Para celulares */
-@media (max-width: 480px) {
-    .imagem-sobre {
-        width: 200px;
-        height: 200px;
-    }
-}
-
-
-@media (max-width: 1024px) {
-    /* Ajustes para tablet */
-    .imagem-sobre {
-        width: 280px;
-        height: 280px;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Ajustes para tablets menores */
-    .imagem-sobre {
-        width: 250px;
-        height: 250px;
-        animation: pulse-border 2.5s infinite;
-    }
-    
-    .right-sobre {
-        justify-content: center;
-        margin-top: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Ajustes para mobile */
-    .imagem-sobre {
-        width: 200px;
-        height: 200px;
-        animation: pulse-border 3s infinite;
-    }
-    
-    .imagem-sobre:hover {
-        transform: scale(1.03);
-    }
-    
-    .headline-sobre {
-        margin-bottom: 1rem;
-    }
-}
-
-
-
 
 }
