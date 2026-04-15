@@ -1167,6 +1167,12 @@ body.no-scroll {
     border-radius: 20px;
 }
 
+/* Garante altura visivel para slides diretos dentro de .imagens-case (ex.: Case 1) */
+.imagens-case > .slide {
+    aspect-ratio: 16 / 9;
+    min-height: 320px;
+}
+
 .slide img,
 .slide video {
     width: 100%;
