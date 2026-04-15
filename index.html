@@ -5,14 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vinicius Pereira - Arquiteto de Experiências Digitais. Especialista em Qualidade de Software e desenvolvimento front-end.">
+    <meta name="keywords" content="desenvolvedor front-end, QA automation, Cypress, Selenium, UX/UI, HTML CSS JavaScript, São Paulo">
+    <meta name="author" content="Vinicius Pereira">
     <meta name="theme-color" content="#0a0a0a">
     <title>Vinicius Pereira | Arquitetura de Experiências Digitais</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://viniciuspereira-coder.github.io/MeuPortfolio/">
+    <meta property="og:title" content="Vinicius Pereira | Arquitetura de Experiências Digitais">
+    <meta property="og:description" content="Especialista em Front-end, QA Automation e UX/UI. Transformo ideias em sistemas que funcionam, páginas que encantam e testes que asseguram confiança.">
+    <meta property="og:image" content="https://viniciuspereira-coder.github.io/MeuPortfolio/assets/img/Minha%20foto.jpg">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vinicius Pereira | Arquitetura de Experiências Digitais">
+    <meta name="twitter:description" content="Especialista em Front-end, QA Automation e UX/UI. Transformo ideias em sistemas que funcionam, páginas que encantam.">
+    <meta name="twitter:image" content="https://viniciuspereira-coder.github.io/MeuPortfolio/assets/img/Minha%20foto.jpg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://viniciuspereira-coder.github.io/MeuPortfolio/">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vinicius Pereira",
+        "jobTitle": "Arquiteto de Experiências Digitais",
+        "description": "Especialista em Qualidade de Software e desenvolvimento front-end.",
+        "url": "https://viniciuspereira-coder.github.io/MeuPortfolio/",
+        "email": "vinicius.moraespereira021@gmail.com",
+        "telephone": "+5511930246426",
+        "image": "https://viniciuspereira-coder.github.io/MeuPortfolio/assets/img/Minha%20foto.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "São Paulo",
+            "addressCountry": "BR"
+        },
+        "sameAs": [
+            "https://github.com/ViniciusPereira-coder",
+            "https://www.linkedin.com/in/vinicius-de-moraes-10b50b151/",
+            "https://www.instagram.com/ninicius_"
+        ],
+        "knowsAbout": ["HTML", "CSS", "JavaScript", "QA Automation", "Cypress", "Selenium", "UX/UI", "DevOps", "AWS"]
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
 
     <!-- CSS -->
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ClashGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsividade.css">
 
@@ -24,6 +72,8 @@
 </head>
 
 <body>
+    <div id="scroll-progress" role="progressbar" aria-label="Progresso de leitura" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
     <a class="skip-link" href="#inicio">Pular para o conteúdo principal</a>
 
     <!--Botão voltar ao topo-->
@@ -74,6 +124,9 @@
 <main id="inicio" class="inicio">
     <div class="container-inicio">
         <div class="conteudo-inicio" data-aos="fade-up" data-aos-duration="1000">
+            <div class="hero-avatar" data-aos="fade-down" data-aos-duration="800">
+                <img src="assets/img/Minha foto.jpg" alt="Foto de Vinicius Pereira" loading="eager">
+            </div>
             <div class="titulo-inicio">
                 <h1>Vinicius Pereira</h1>
                 <h1 class="destaque-inicio">Arquiteto de Experiências Digitais</h1>
@@ -172,22 +225,48 @@
                     <div class="box-skills" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
                         <i class="bi bi-code-slash"></i>
                         <h3>Desenvolvimento Front-end</h3>
-                        <p>HTML5, CSS3, JavaScript moderno, Bootstrap, CSS e integração com APIs.</p>
+                        <p>HTML5, CSS3, JavaScript moderno, Bootstrap e integração com APIs.</p>
+                        <div class="skill-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Bootstrap</span>
+                            <span>REST APIs</span>
+                        </div>
                     </div>
                     <div class="box-skills" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                         <i class="bi bi-shield-check"></i>
                         <h3>Qualidade de Software</h3>
                         <p>Selenium (Java), Cypress, Tosca, automação de testes e garantia de qualidade.</p>
+                        <div class="skill-tags">
+                            <span>Cypress</span>
+                            <span>Selenium</span>
+                            <span>Tosca</span>
+                            <span>Testes E2E</span>
+                        </div>
                     </div>
                     <div class="box-skills" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
                         <i class="bi bi-cloud"></i>
                         <h3>Infraestrutura & DevOps</h3>
                         <p>AWS, Git/GitHub, Maven e boas práticas de segurança (ISO 27001).</p>
+                        <div class="skill-tags">
+                            <span>AWS</span>
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>Maven</span>
+                            <span>ISO 27001</span>
+                        </div>
                     </div>
                     <div class="box-skills" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
                         <i class="bi bi-palette"></i>
                         <h3>Design UX/UI</h3>
                         <p>Interfaces intuitivas, esteticamente atraentes e centradas na experiência do usuário.</p>
+                        <div class="skill-tags">
+                            <span>Figma</span>
+                            <span>Wireframing</span>
+                            <span>Prototipagem</span>
+                            <span>Design System</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -199,7 +278,7 @@
             <div class="container-servicos">
                 <div class="headline-servicos" data-aos="fade-up" data-aos-duration="1000">
                     <div class="titulo-servicos">
-                        <h1>Serviços</h1>
+                        <h2>Serviços</h2>
                     </div>
                     <div class="descricao-servicos" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                         <p>Trabalho com excelência porque entendo que qualidade não é um diferencial — é o mínimo.</p>
@@ -209,42 +288,42 @@
                     <!--Serviço 1-->
                     <div class="card-servicos-left" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
                         <div class="card-titulo">
-                            <h1>Desenvolvimento Web Personalizado</h1>
+                            <h3>Desenvolvimento Web Personalizado</h3>
                         </div>
                         <div class="card-icon"><i class="bi bi-layout-text-window"></i></div>
                     </div>
                     <!--Serviço 2-->
                     <div class="card-servicos" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">
                         <div class="card-titulo">
-                            <h1>Automação de Testes de Software</h1>
+                            <h3>Automação de Testes de Software</h3>
                         </div>
                         <div class="card-icon"><i class="bi bi-robot"></i></div>
                     </div>
                     <!--Serviço 3-->
                     <div class="card-servicos-left" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
                         <div class="card-titulo">
-                            <h1>Landing Pages de Alta Conversão</h1>
+                            <h3>Landing Pages de Alta Conversão</h3>
                         </div>
                         <div class="card-icon"><i class="bi bi-megaphone"></i></div>
                     </div>
                     <!--Serviço 4-->
                     <div class="card-servicos" data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
                         <div class="card-titulo">
-                            <h1>Debug & Soluções</h1>
+                            <h3>Debug & Soluções</h3>
                         </div>
                         <div class="card-icon"><i class="bi bi-bug-fill"></i></div>
                     </div>
                     <!--Serviço 5-->
                     <div class="card-servicos-left" data-aos="fade-right" data-aos-delay="700" data-aos-duration="1000">
                         <div class="card-titulo">
-                            <h1>Consultoria em Qualidade de Software</h1>
+                            <h3>Consultoria em Qualidade de Software</h3>
                         </div>
                         <div class="card-icon"><i class="bi bi-graph-up-arrow"></i></div>
                     </div>
                     <!--Serviço 6-->
                     <div class="card-servicos" data-aos="fade-left" data-aos-delay="800" data-aos-duration="1000">
                         <div class="card-titulo">
-                            <h1>Otimização de Performance</h1>
+                            <h3>Otimização de Performance</h3>
                         </div>
                         <div class="card-icon"><i class="bi bi-speedometer2"></i></div>
                     </div>
@@ -277,7 +356,7 @@
         <section id="portfolio" class="portfolio">
             <div class="container-portfolio" data-aos="fade-up" data-aos-duration="1000">
                 <div class="headline-portfolio">
-                    <h1 class="titulo">Portfólio</h1>
+                    <h2 class="titulo">Portfólio</h2>
                     <span class="descricao">Alguns dos projetos que desenvolvi, unindo precisão técnica e sensibilidade criativa.</span>
                 </div>
                 <div class="container-case">
@@ -304,7 +383,7 @@
                         </div>
                         <div class="textos-case">
                             <div class="conteudo-textos-case">
-                                <h1>Projeto Front-end</h1>
+                                <h3>Projeto Front-end</h3>
                                 <p>Site desenvolvido com foco em interface, responsividade e experiência do usuário. Os vídeos mostram a navegação das principais telas.</p>
                                 <div class="case-tags">
                                     <span>HTML</span>
@@ -319,7 +398,7 @@
                     <div class="case2" data-aos="fade-left" data-aos-delay="300">
                         <div class="textos-case">
                             <div class="conteudo-textos-case">
-                                <h1>Automação com Cypress</h1>
+                                <h3>Automação com Cypress</h3>
                                 <p>Especializado em testes automatizados com Cypress, assegurando aplicações web estáveis e eficientes.</p>
                                 <div class="case-tags">
                                     <span>QA Automation</span>
@@ -360,7 +439,7 @@
                         </div>
                         <div class="textos-case">
                             <div class="conteudo-textos-case">
-                                <h1>Projeto em Destaque</h1>
+                                <h3>Projeto em Destaque</h3>
                                 <p>Desenvolvimento de soluções web customizadas com foco em performance e experiência do usuário.</p>
                                 <div class="case-tags">
                                     <span>Web Design</span>
@@ -375,7 +454,7 @@
                     <div class="case4" data-aos="fade-left" data-aos-delay="500">
                         <div class="textos-case">
                             <div class="conteudo-textos-case">
-                                <h1>Soluções Integradas</h1>
+                                <h3>Soluções Integradas</h3>
                                 <p>Front-end e integrações com APIs para sistemas completos e escaláveis.</p>
                                 <div class="case-tags">
                                     <span>Front-end</span>
@@ -429,7 +508,8 @@
                     <label for="mensagem">Descreva seu projeto ou necessidade</label>
                 </div>
                 
-                <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+                <input type="hidden" name="_next" value="https://viniciuspereira-coder.github.io/MeuPortfolio/#contato">
+                <input type="hidden" name="_subject" value="Novo contato pelo portfólio!">
                 <input type="hidden" name="_captcha" value="false">
                 
                 <button type="submit" class="cta-button">
